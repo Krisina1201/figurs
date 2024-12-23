@@ -1,0 +1,97 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="figurs.Views.MainWindow"
+        Width="400" Height="400"
+        WindowState="Maximized"
+        Title="figurs">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Click="OnDrawSquareClick">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Rectangle Width="20" Height="20" Fill="Blue" Margin="5"/>
+                            <TextBlock Text="Квадрат" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+            <Button Click="OnDrawPentagonClick">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Polygon Points="10,0 20,10 15,20 5,20 0,10" Fill="Green" Width="20" Height="20" Margin="5"/>
+                            <TextBlock Text="Пятиугольник" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+            <Button Click="OnDrawHexagonClick">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Polygon Points="10,0 20,5 20,15 10,20 0,15 0,5" Fill="Red" Width="20" Height="20" Margin="5"/>
+                            <TextBlock Text="Шестиугольник" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+            <Button Click="OnDrawOctagonClick">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Polygon Points="5,0 15,0 20,5 20,10 15,15 10,15 5,10 0,5" Fill="Purple" Width="20" Height="20" Margin="5"/>
+                            <TextBlock Text="Восьмиугольник" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+            <Button Click="OnDrawCircleClick">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="20" Height="20" Fill="Yellow" Margin="5"/>
+                            <TextBlock Text="Круг" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+            <Button Click="OnDrawTriangleClick">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Polygon Points="10,0 20,20 0,20" Fill="Orange" Width="20" Height="20" Margin="5"/>
+                            <TextBlock Text="Треугольник" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+            <Button Click="OnDrawHeptagonClick">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Polygon Points="10,0 20,5 18,10 10,15 2,10 0,5" Fill="Brown" Width="20" Height="20" Margin="5"/>
+                            <TextBlock Text="Семиугольник" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+        </StackPanel>
+
+        <Canvas Name="DrawingCanvas" Grid.Row="1" Grid.Column="0" Background="LightGray"/>
+    </Grid>
+</Window>
